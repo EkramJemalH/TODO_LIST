@@ -5,14 +5,14 @@ const ulEl = document.getElementById("ul-el");
 
 addBtn.addEventListener("click", function () {
   if (inputEl.value.trim() !== "") {
-    myTask.push({ text: inputEl.value.trim(), status: "not-done" }); // Add task with a status
+    myTask.push({ text: inputEl.value.trim(), status: "not-done" }); 
     renderlist();
-    inputEl.value = ""; // Clear the input field
+    inputEl.value = ""; 
   }
 });
 
 function renderlist() {
-  ulEl.innerHTML = ""; // Clear the list
+  ulEl.innerHTML = ""; 
   for (let i = 0; i < myTask.length; i++) {
     const li = document.createElement("li");
 
@@ -33,7 +33,6 @@ function renderlist() {
     deleteBtn.textContent = "Delete";
     deleteBtn.classList.add("delete-btn");
 
-    // Toggle "done" state
     circle.addEventListener("click", function () {
       myTask[i].status = myTask[i].status === "done" ? "not-done" : "done";
       myTask.splice(i, 1);
@@ -44,18 +43,14 @@ function renderlist() {
     
     });
 
-    // Delete task
     deleteBtn.addEventListener("click", function () {
-      myTask.splice(i, 1); // Remove the task from the array
-      renderlist(); // Re-render the list
+      myTask.splice(i, 1); 
+      renderlist();
     });
 
-    // Append elements to the list item
     li.appendChild(circle);
     li.appendChild(taskText);
     li.appendChild(deleteBtn);
-
-    // Add list item to the unordered list
     ulEl.appendChild(li);
   }
 }
