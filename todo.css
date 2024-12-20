@@ -1,0 +1,114 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(to left,#5b58eb,#bb63ff,#56e1e9);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-sec{
+    margin-top:64px;
+    width:500px;
+    height:300px;
+    border-radius:12px;
+    background-image:linear-gradient(to bottom,#112c70,#fbe4d8);
+    overflow-y:auto;
+
+}
+.todo-sec::-webkit-scrollbar {
+    width: 8px;
+    background-color: white;
+}
+
+.todo-sec::-webkit-scrollbar-thumb {
+    background-color: #0a2353; 
+    border-radius: 4px; 
+}
+
+.todo-sec::-webkit-scrollbar-track {
+    background-color: #f0f0f0; 
+    border-radius: 4px; 
+}
+
+.header{
+    text-align: center;
+    color:#fbe4d8;
+    font-size:32px;
+    margin-top:12px;
+    margin-bottom: 24px;
+}
+#add-btn{
+    width:24%;
+    height:42px;
+    border-radius: 24px;
+    border:none;
+    float:right;
+    margin-right:12px;
+    background-color: #112c70;
+    color:#fbe4d8;
+    font-size:18px;
+    font-weight: 700;
+}
+#input-el{
+    width:71%;
+    height:42px;
+    margin-left:12px;
+    border-radius:24px ;
+    border:none;
+    padding-left:12px;
+}
+ul{
+    list-style: none;
+    padding:0;
+    margin:12px;
+}
+li{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+    font-size:18px;
+}
+.circle{
+    width:20px;
+    height:20px;
+    border:2px solid black;
+    border-radius:50%;
+    margin-right:10px;
+    cursor: pointer;
+}
+.task-text{
+    font-weight: bold;
+}
+  li {
+    opacity: 1;
+    transition: opacity 0.75s ease, transform 0.3s ease;
+  }
+  
+  li.removing {
+    opacity: 0; 
+    transform: translateY(-10px);
+    text-decoration: line-through;
+    text-decoration-color: #aa0033;
+    text-decoration-thickness:3px ;
+    color:white;
+  }
+ 
+  
+  .delete-btn{
+    margin-left:10px;
+    background-color:#112c70;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    cursor:poniter;
+    float:left;
+    margin-right:10px;
+    border-radius: 12px;
+  }
+  .delete-btn:hover{
+    background-color:#aa0033;
+  }
